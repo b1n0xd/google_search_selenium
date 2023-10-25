@@ -13,3 +13,7 @@ class Browser:
                        ]; 
         agent = user_agents[random.randint(0, len(user_agents) - 1)];
         chrome_options.add_argument("user-agent=" + user_agents);
+        chrome_options.add_argument("--headless");
+        chrome_options.add_argument("--no-sandbox");
+        chrome_options.add_argument("--mute-audio");
+        self.driver = webdriver.Chrome();
